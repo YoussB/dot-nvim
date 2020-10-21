@@ -122,5 +122,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-stand
 nnoremap <leader>k <Plug>(ale_previous_wrap)
 nnoremap <leader>j <Plug>(ale_next_wrap)
 
+" my notes git push mapping
+nnoremap ,h :cd %:h<CR>
+nnoremap ,p :w<CR> :cd %:h<CR> :!git add . && git ci -m "adds or updates, w.ev" && git push<CR>
+
 " bosh spec highlighting
 autocmd BufNewFile,BufReadPost spec set filetype=yaml
